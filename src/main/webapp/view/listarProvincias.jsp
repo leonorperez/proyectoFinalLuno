@@ -39,8 +39,7 @@
 			<div>
 				<a href="inicio.html"><button id="volver"class="btn btn-success" type="button">Volver</button></a>
 			</div>
-
-
+			
 
 			<table class="table table-hover table-sm">
 				<thead class="table-success">
@@ -69,21 +68,45 @@
 						out.println("<td>");
 						out.println("<a href='editProvincia.jsp?idProv=" + prov.getIdProvincia() + "&nombre=" + prov.getNombre() + "'>");
 						out.println("<i class='bi bi-pencil-fill'></i>");
+						out.println("</a>");
+						
+						out.println("<a href='#' data-bs-toggle='modal' data-bs-target='#exampleModal'>");
 						out.println("<i class='bi bi-trash-fill'></i>");
 						out.println("</a>");
+																
 						out.println("</td>");
-
 						out.println("</tr>");
 					}
 					%>
 
 				</tbody>
 			</table>
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1"
+				aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Provincia</h1>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">Desea eliminar la provincia?</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary"
+								data-bs-dismiss="modal">Cancelar</button>
+							<button type="button" class="btn btn-primary">Eliminar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
 		</div>
 
 	</main>
-	<footer>
-		<!-- place footer here -->
+		<footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">&copy; Leonor Perez</p>
 	</footer>
 	<!-- Bootstrap JavaScript Libraries -->
 	<script

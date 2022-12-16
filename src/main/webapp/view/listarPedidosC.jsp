@@ -30,9 +30,7 @@
 		</div>
 
 		<div>
-			<a href="inicio.html"><button id="volver" class="btn btn-success"
-					type="button">Volver</a>
-			</button>
+			<a href="inicio.html"><button id="volver" class="btn btn-success"type="button">Volver</button></a>
 		</div>
 
 		<table class="table table-hover table-sm">
@@ -83,8 +81,7 @@
 					out.println("</td>");
 					out.println("<td>");
 				%>
-				<a
-					href="editarPedidoC.jsp?idPedido=<%out.println(pedido.getIdPedido());%>">
+				<a href="editarPedidoC.jsp?idPedido=<%out.println(pedido.getIdPedido());%>">
 					edit </a>
 
 				<%
@@ -98,6 +95,10 @@
 
 
 	</div>
+	
+		<footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">&copy; Leonor Perez</p>
+	</footer>
 
 
 	<!-- Optional JavaScript -->

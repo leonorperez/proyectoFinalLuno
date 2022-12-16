@@ -22,22 +22,10 @@
 		<nav>
 			<div id="header">
 				<ul class="nav">
-					<li><a href="">Usuarios</a>
-						<ul>
-							<li><a href="altaUsuario.jsp">Crear Usuario</a></li>
-							<li><a href="listarUsuarios2.jsp">Listado de Usuarios</a></li>
-						</ul></li>
-					<li><a href="">Pedidos</a>
-						<ul>
-							<li><a href="listarPedidosC.jsp">Listado de Pedidos</a></li>
-						</ul></li>
-					<li><a href="">Acerca de</a>
-						<ul>
-							<li><a href="">Nosotros</a></li>
-							<li><a href="">Nuestra Misión</a></li>
-							<li><a href="https://www.facebook.com/lunotiendaonline">Historia</a></li>
-						</ul></li>
-
+					<div>
+						<a href="inicio.html"><button id="volver"
+								class="btn btn-success" type="button">Volver</button></a>
+					</div>
 				</ul>
 			</div>
 		</nav>
@@ -83,6 +71,10 @@
 		</div>
 	</div>
 
+
+	<footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">&copy; Leonor Perez</p>
+	</footer>
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

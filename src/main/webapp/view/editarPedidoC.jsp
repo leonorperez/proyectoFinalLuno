@@ -215,9 +215,9 @@
   </div>
   </div>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2017-2020 Codo a Codo</p>
-  </footer>
+  	<footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">&copy; Leonor Perez</p>
+	</footer>
   </div>
 
   <script src="./js/form-validation.js"></script>

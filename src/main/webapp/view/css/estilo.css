@@ -86,6 +86,7 @@ footer {
     text-decoration: none;
     outline: 0;
     padding: auto;
+    margin-top: 0;
 }
 .icon{
     color: white;

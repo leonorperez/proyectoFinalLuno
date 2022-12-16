@@ -14,7 +14,7 @@
   <div class="py-4 text-center">
     <img class="d-block mx-auto mb-4" src="./images/LogoLuno.jpg" alt="Logo caba" width="72" height="72">
     <h2>Formulario de Pedido</h2>
-    <p class="lead">La fecha de entrega serï¿½ coordinada telefï¿½nicamente.</p>
+    <p class="lead">La fecha de entrega será coordinada telefónicamente.</p>
   </div>
 
   <div class="col-md-12 text-center">
@@ -32,7 +32,7 @@
           <label for="lastName">Apellido</label>
           <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Tu apellido" value="" required>
           <div class="invalid-feedback">
-            Faltï¿½ ingresar el apellido.
+            Falta ingresar el apellido.
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@
 	          </div>
 	          <input type="text" class="form-control" id="username" name="username" placeholder="Usuario" required>
 	          <div class="invalid-feedback" style="width: 100%;">
-	            Faltï¿½ ingresar el usuario.
+	            Falta ingresar el usuario.
 	          </div>
 	        </div>
 	      </div>
@@ -57,7 +57,7 @@
 	        <label for="email">Email <span class="text-muted">(Optional)</span></label>
 	        <input type="email" class="form-control" id="email"  name="email" placeholder="tumail@gmail.com">
 	        <div class="invalid-feedback">
-	          El e-mail es invÃ¡lido.
+	          El e-mail es inválido.
 	        </div>
 	      </div>
 	   </div>	  
@@ -67,7 +67,7 @@
 	        <label for="address">Lugar de Entrega</label>
 	        <input type="text" class="form-control" id="address" name="address" placeholder="Calle, nro,  localidad..." required>
 	        <div class="invalid-feedback">
-	          Faltï¿½ ingresar el domicilio de entrega.
+	          Falta ingresar el domicilio de entrega.
 	        </div>
 	      </div>
 	   </div>
@@ -82,15 +82,15 @@
             <option value="1">Moreno</option>
           </select>
           <div class="invalid-feedback">
-            Seleccionï¿½ una localidad vï¿½lida.
+            Seleccionó una localidad válida.
           </div>
         </div>
         <div class="col-md-4 mb-3">
           <label for="state">Provincia</label>
           <select class="custom-select d-block w-100" id="state" name="state" required>
-            <option value="">Seleccionï¿½.</option>
+            <option value="">Seleccionwww.</option>
             <option value="1">Buenos Aires</option>
-            <option value="2">Tucumï¿½n</option>
+            <option value="2">Tucumán</option>
           </select>
           <div class="invalid-feedback">
             Seleccionï¿½ una provincia vï¿½lida.
@@ -165,9 +165,9 @@
   </div>
   </div>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2017-2020 Codo a Codo</p>
-  </footer>
+  	<footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">&copy; Leonor Perez</p>
+	</footer>
   </div>
 
   <script src="./js/form-validation.js"></script>
