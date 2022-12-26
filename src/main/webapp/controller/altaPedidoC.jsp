@@ -2,7 +2,7 @@
 <%@page import="model.Localidad"%>
 <%@page import="model.Pedido"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,35 +10,40 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	String nombre =request.getParameter("firstName");
-	String apellido =request.getParameter("lastName");
-	String usuario =request.getParameter("username");
-	String mail =request.getParameter("email");
-	String lugarentrega =request.getParameter("address");
-	String idLocalidad = request.getParameter("country");
-	String idProvincia = request.getParameter("state");
-	String codpostal =request.getParameter("zip");
-	String formadepago =request.getParameter("paymentMethod");
-	String tarjtitular =request.getParameter("cc-name");
-	String tarjnumero =request.getParameter("cc-number");
-	String tarjvto =request.getParameter("cc-expiration");
-	String tarjclave =request.getParameter("cc-cvv");
-	
-	//populate: llenar un obj con datos para insertarlos
-	Localidad localidad = new Localidad(Integer.valueOf(idLocalidad), null, null);
-	Pedido pedido = new Pedido(nombre, apellido, usuario, mail, lugarentrega, localidad, codpostal, formadepago, tarjtitular, Integer.parseInt(tarjnumero), tarjvto, Integer.parseInt(tarjclave));
-	
-	PedidoDAOC dao = new PedidoDAOC();
-	Boolean insertOk = dao.addPedido(pedido);
-	
+	<%
+	try {
+		String nombre = request.getParameter("firstName");
+		String apellido = request.getParameter("lastName");
+		String usuario = request.getParameter("username");
+		String mail = request.getParameter("email");
+		String lugarentrega = request.getParameter("address");
+		String idLocalidad = request.getParameter("country");
+		String idProvincia = request.getParameter("state");
+		String codpostal = request.getParameter("zip");
+		String formadepago = request.getParameter("paymentMethod");
+		String tarjtitular = request.getParameter("cc-name");
+		String tarjnumero = request.getParameter("cc-number");
+		String tarjvto = request.getParameter("cc-expiration");
+		String tarjclave = request.getParameter("cc-cvv");
 
-	if(insertOk) {
-		response.sendRedirect("../view/mensajeOk.jsp");
-	} else {
+		//populate: llenar un obj con datos para insertarlos
+		Localidad localidad = new Localidad(Integer.valueOf(idLocalidad), null, null);
+		Pedido pedido = new Pedido(nombre, apellido, usuario, mail, lugarentrega, localidad, codpostal, formadepago,
+		tarjtitular, Integer.parseInt(tarjnumero), tarjvto, Integer.parseInt(tarjclave));
+
+		PedidoDAOC dao = new PedidoDAOC();
+		Boolean insertOk = dao.addPedido(pedido);
+
+		if (insertOk) {
+			response.sendRedirect("../view/mensajeOk.jsp");
+		} else {
+			response.sendRedirect("../view/mensajeError.jsp");
+		}
+	} catch (Exception e) {
 		response.sendRedirect("../view/mensajeError.jsp");
-	}	
-%>
+		e.printStackTrace();
+	}
+	%>
 
 </body>
 </html>

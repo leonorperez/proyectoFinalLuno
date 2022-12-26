@@ -33,7 +33,7 @@
 	</header>
 
 	<div class="py-4 text-center">
-		<img class="d-block mx-auto mb-4" src="./images/logo.jpg"
+		<img class="d-block mx-auto mb-4" src="images/LogoLuno.PNG"
 			alt="Logo caba" width="72" height="72">
 		<h2>Formulario de Pedido</h2>
 		<p class="lead">La fecha de entrega se coordinara telefonicamente.</p>

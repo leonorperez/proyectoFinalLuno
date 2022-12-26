@@ -11,8 +11,7 @@ import model.Localidad;
 import model.Provincia;
 
 public class ProvinciaDAOC {
-	
-	//TODO: IMPLELMENTARW
+
 	public List<Provincia> listarProvincias() throws SQLException {
 		//conn a db
 		ConexionDB conex = new ConexionDB();

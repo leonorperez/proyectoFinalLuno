@@ -11,6 +11,10 @@ public class Localidad {
 		this.nombre = nombre;
 		this.provincia = provincia;
 	}
+	public Localidad(Integer idLocalidad, String nombre) {
+		this.idLocalidad = idLocalidad;
+		this.nombre = nombre;
+	}
 
 	public Integer getIdLocalidad() {
 		return idLocalidad;

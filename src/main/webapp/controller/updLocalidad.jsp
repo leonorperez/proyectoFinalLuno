@@ -1,11 +1,13 @@
-<%@page import="dao.ProvinciaDAO2"%>
+<%@page import="dao.LocalidadDAO2"%>
+
 <%
 	try {
+		Integer idLoc = Integer.valueOf(request.getParameter("idLoc"));
 		String nombre = request.getParameter("nombre");
 		
-		ProvinciaDAO2 dao = new ProvinciaDAO2();
+		LocalidadDAO2 dao = new LocalidadDAO2();
 		
-		Boolean insertOk = dao.addProvincia(nombre);
+		Boolean insertOk = dao.updLocalidad(idLoc, nombre);
 		
 		if(insertOk) {
 			response.sendRedirect("../view/mensajeOk.jsp");
@@ -17,4 +19,5 @@
 		response.sendRedirect("../view/mensajeError.jsp");
 		e.printStackTrace();	
 	}
+
 %>

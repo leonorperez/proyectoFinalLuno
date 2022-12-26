@@ -19,12 +19,12 @@ import model.Usuario;
 public class UsuarioDAO {
 	
 	/**
-	 * Verifica si el usuario y la contreseña existen
+	 * Verifica si el usuario y la contreseï¿½a existen
 	 * en la base de datos.
 	 * 
 	 * 
 	 * @param usuario Usuario ingresado por el usuario
-	 * @param contrasenia Contraseña ingresada por el usuario
+	 * @param contrasenia Contraseï¿½a ingresada por el usuario
 	 * 
 	 * @return Si existen devuelve un verdadero y sino existen
 	 * devuelte un falso.
@@ -33,8 +33,8 @@ public class UsuarioDAO {
 		try {
 			
 			ConexionDB conexionDB = new ConexionDB(); //crea un objeto ConexionDB para conectarse y consultar la DB
-			Connection connection = conexionDB.establecerConexion(); //establece la conexión con la Db
-			Statement statement = connection.createStatement(); //sesión
+			Connection connection = conexionDB.establecerConexion(); //establece la conexiï¿½n con la Db
+			Statement statement = connection.createStatement(); //sesiï¿½n
 			
 			String sql = new String("SELECT * FROM usuarios WHERE usuario = '" + usuario.trim() + "' AND clave ='"+ contrasenia.trim() +"' ");
 			
