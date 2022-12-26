@@ -1,5 +1,6 @@
 package dao;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -24,6 +25,28 @@ public class UsuarioDAO2 {
 		Statement st = conexionDB.crearStatement();
 		ResultSet rs = st.executeQuery("SELECT * FROM usuarios WHERE usuario='" + user + "' AND clave='" + pass + "'");
 		return rs.next();
+
+	}
+	public Boolean guardarUsuario(Usuario usuario) {
+		try {
+			ConexionDB conexionDB = new ConexionDB();
+			Connection connection = conexionDB.establecerConexion();
+			Statement statement = connection.createStatement();
+			
+			String sql = new String();
+			sql = "INSERT INTO `usuarios`(`usuario`, `clave`) VALUES ( "
+					+ "'"+ usuario.getUsuario() + "'," 
+					+ "'" + usuario.getClave() + "');";
+			
+			statement.executeUpdate(sql);
+			
+			
+			return true;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 
 	}
 
@@ -63,6 +86,20 @@ public class UsuarioDAO2 {
 				+ "' WHERE idusuario='" + idusuario + "'");
 
 		return cantUpd == 1;
+	}
+	/**
+	 * 
+	 * @param idUsuario
+	 * @return  true si la borró o false sino.
+	 * @throws SQLException
+	 */
+	public Boolean deleteUsuario(Integer idUsuario) throws SQLException {
+		ConexionDB con = new ConexionDB();
+		Statement st= con.crearStatement();
+		
+		Integer cantDel = st.executeUpdate("DELETE FROM usuarios WHERE idusuario='"+idUsuario+"'");
+		
+		return cantDel == 1;
 	}
 
 }

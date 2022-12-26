@@ -84,7 +84,13 @@ public class ProvinciaDAO2 {
 
 		return rs.next();
 	}
-	
+	/**
+	 * modifica una provincia de la bbdd
+	 * @param idProv
+	 * @param nombre
+	 * @return true si la modificó o false sino.
+	 * @throws SQLException
+	 */
 	public Boolean updProvincia(Integer idProv, String nombre) throws SQLException {
 		ConexionDB con = new ConexionDB();
 		Statement st= con.crearStatement();
@@ -92,5 +98,19 @@ public class ProvinciaDAO2 {
 		Integer cantUpd = st.executeUpdate("UPDATE provincias SET nombre='"+nombre+"' WHERE idProvincia='"+idProv+"'");
 		
 		return cantUpd == 1;
+	}
+	/**
+	 * 
+	 * @param idProv
+	 * @return  true si la borró o false sino.
+	 * @throws SQLException
+	 */
+	public Boolean deleteProvincia(Integer idProv) throws SQLException {
+		ConexionDB con = new ConexionDB();
+		Statement st= con.crearStatement();
+		
+		Integer cantDel = st.executeUpdate("DELETE FROM provincias WHERE idProvincia='"+idProv+"'");
+		
+		return cantDel == 1;
 	}
 }

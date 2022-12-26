@@ -1,3 +1,4 @@
+<%@page import="dao.UsuarioDAO2"%>
 <%@page import="dao.UsuarioDAO"%>
 <%@page import="model.Usuario"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -15,15 +16,15 @@
 	
 	Usuario usu = new Usuario(usuario, contrasenia);
 	
-	UsuarioDAO usuarioDAO = new UsuarioDAO();
+	UsuarioDAO2 usuarioDAO = new UsuarioDAO2();
 	
 	Boolean okGuardado = usuarioDAO.guardarUsuario(usu);
 	
 	   if (okGuardado) {
-	        out.println("El usuario se agregó correctamente <br>");
-	    } else {
-	        out.println("Error en agregar usuario <br>");
-	    }	
+			response.sendRedirect("../view/mensajeOk.jsp");
+		}else {
+			response.sendRedirect("../view/mensajeError.jsp");
+		}
 	%>
 
 </body>

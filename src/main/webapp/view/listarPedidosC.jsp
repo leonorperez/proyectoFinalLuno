@@ -18,6 +18,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
+	<link rel="stylesheet"	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 
 <body class="text-center bg-light">
@@ -55,40 +56,55 @@
 
 				for (Pedido pedido : listPed) {
 					out.println("<tr>");
+					
 					out.println("<td>");
 					out.println(pedido.getIdPedido());
 					out.println("</td>");
+					
 					out.println("<td>");
 					out.println(pedido.getNombre());
 					out.println("</td>");
+					
 					out.println("<td>");
 					out.println(pedido.getApellido());
 					out.println("</td>");
+					
 					out.println("<td>");
 					out.println(pedido.getMail());
 					out.println("</td>");
+					
 					out.println("<td>");
 					out.println(pedido.getLugarEntrega());
 					out.println("</td>");
+					
 					out.println("<td>");
 					out.println(pedido.getLocalidad().getNombre());
 					out.println("</td>");
+					
 					out.println("<td>");
 					out.println(pedido.getLocalidad().getProvincia().getNombre());
 					out.println("</td>");
+					
 					out.println("<td>");
 					out.println(pedido.getCodPostal());
 					out.println("</td>");
+					
 					out.println("<td>");
+					out.println("<a href='editarPedidoC.jsp?idPedido=" + pedido.getIdPedido() + "'>");
+					out.println("<i class='bi bi-pencil-fill'></i>");
+					out.println("</a>");					
+					out.println("</td>");
+					out.println("</tr>");
 				%>
-				<a href="editarPedidoC.jsp?idPedido=<%out.println(pedido.getIdPedido());%>">
-					edit </a>
+				
+					
 
 				<%
 				out.println("</td>");
 				out.println("</tr>");
 				}
 				%>
+				
 
 			</tbody>
 		</table>

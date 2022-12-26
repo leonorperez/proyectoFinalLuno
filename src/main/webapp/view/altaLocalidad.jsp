@@ -12,7 +12,8 @@
 	rel="stylesheet"
 	integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
 	crossorigin="anonymous">
-	<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/estilo.css" rel="stylesheet" type="text/css">
 </head>
 <body class="text-center">
 	<ul class="nav">

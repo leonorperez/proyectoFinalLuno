@@ -21,7 +21,7 @@
 	crossorigin="anonymous">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-
+<link href="./css/bootstrap.min.css" rel="stylesheet">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -74,7 +74,7 @@
 						out.println("<i class='bi bi-pencil-fill'></i>");
 						out.println("</a>");
 						
-						out.println("<a href='#' data-bs-toggle='modal' data-bs-target='#exampleModal'>");
+						out.println("<a href='#' data-bs-toggle='modal'	data-bs-target='#exampleModal' data-bs-whatever='" + usu.getIdUsuario() + "'>");
 						out.println("<i class='bi bi-trash-fill'></i>");
 						out.println("</a>");
 						
@@ -85,28 +85,36 @@
 
 				</tbody>
 			</table>
-			<!-- Modal -->
 			<div class="modal fade" id="exampleModal" tabindex="-1"
 				aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Usuario</h1>
+							<h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar
+								Usuario</h1>
 							<button type="button" class="btn-close" data-bs-dismiss="modal"
 								aria-label="Close"></button>
 						</div>
-						<div class="modal-body">Desea eliminar el usuario?</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary"
-								data-bs-dismiss="modal">Cancelar</button>
-							<button type="button" class="btn btn-primary">Eliminar</button>
-						</div>
+						
+						<form action="../controller/deleteUsuario.jsp" method="post">
+							<div class="modal-body">
+
+								<div class="mb-3">
+									<div>Deseas eliminar este usuario?</div>
+									<input type="hidden" class="form-control" id="idUsuario" name="idUsuario">
+								</div>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary"
+									data-bs-dismiss="modal">Cancelar</button>
+								<button type="submit" class="btn btn-primary">Eliminar</button>
+							</div>					
+					</form>
 					</div>
 				</div>
+
 			</div>
-
-		</div>
-
 	</main>
 		<footer class="my-5 pt-5 text-muted text-center text-small">
 		<p class="mb-1">&copy; Leonor Perez</p>
@@ -125,6 +133,8 @@
 		crossorigin="anonymous">
 		
 	</script>
+	</script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>

@@ -3,32 +3,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="shortcut icon" href="images/loguito.png"/>
+<link rel="shortcut icon" href="images/loguito.png" />
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 
 <!-- Bootstrap core CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-	crossorigin="anonymous">
-
-	<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"	crossorigin="anonymous">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="bg-light">
-    <header>
-        <nav>
-            <div id="header">
-                <ul class="nav">
- 					<div>
-				<a href="inicio.html"><button id="volver"class="btn btn-success" type="button">Volver</a></button>
+	<header>
+		<nav>
+			<div id="header">
+				<ul class="nav">
+					<div>
+				<a href="inicio.html"><button id="volver"
+						class="btn btn-success" type="button">Volver</button></a>
 			</div>
-                </ul>
-            </div>
-        </nav>
-    </header>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
 	<div class="py-4 text-center">
 		<img class="d-block mx-auto mb-4" src="./images/LogoLuno.PNG"
@@ -39,30 +38,33 @@
 	</div>
 
 	<div class="container">
-	<div class="col-md-12 text-center">
-		<form action="../controller/guardarUsuarioC.jsp" method="POST">
-			<div class="row">
-				<div class="col-md-6 mb-3">
-					<label for="user">Usuario</label> 
-					<input type="email" class="form-control" id="user" name="user" placeholder="Tu usuario" value="" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+		<div class="col-md-12 text-center">
+			<form action="../controller/guardarUsuario.jsp" method="POST">
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label for="user">Usuario</label> <input type="email"
+							class="form-control" id="user" name="user"
+							placeholder="Tu usuario" value="" required
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+					</div>
+					<div class="col-md-6 mb-3">
+						<label for="pass">Contraseña</label> <input type="password"
+							class="form-control" id="pass" name="pass"
+							placeholder="Tu contraseña" value="" required
+							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+					</div>
 				</div>
-				<div class="col-md-6 mb-3">
-					<label for="pass">Contraseña</label> 
-					<input type="password" class="form-control" id="pass" name="pass" placeholder="Tu contraseña" value="" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-				</div>
-			</div>
 
-			<hr class="mb-4">
+				<hr class="mb-4">
 
-			<div class="row">
-				<div class="d-flex justify-content-around">
-					<button class="btn btn-primary btn-lg btn-block" type="submit">
-						Ingresar la Solicitud
-					</button>
+				<div class="row">
+					<div class="d-flex justify-content-around">
+						<button class="btn btn-primary btn-lg btn-block" type="submit">
+							Ingresar la Solicitud</button>
+					</div>
 				</div>
-			</div>
-		</form>
-	</div>
+			</form>
+		</div>
 	</div>
 	<footer class="my-5 pt-5 text-muted text-center text-small">
 		<p class="mb-1">&copy; Leonor Perez</p>
@@ -71,6 +73,7 @@
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous">
+	</script>
 </body>
 </html>

@@ -27,7 +27,7 @@
 	
 	//populate: llenar un obj con datos para insertarlos
 	Localidad localidad = new Localidad(Integer.valueOf(idLocalidad), null, null);
-	Pedido pedido = new Pedido(nombre, apellido, usuario, mail, lugarentrega, localidad, codpostal, formadepago, tarjtitular, Integer.valueOf(tarjnumero), tarjvto, Integer.valueOf(tarjclave));
+	Pedido pedido = new Pedido(nombre, apellido, usuario, mail, lugarentrega, localidad, codpostal, formadepago, tarjtitular, Integer.parseInt(tarjnumero), tarjvto, Integer.parseInt(tarjclave));
 	
 	PedidoDAOC dao = new PedidoDAOC();
 	Boolean insertOk = dao.addPedido(pedido);
