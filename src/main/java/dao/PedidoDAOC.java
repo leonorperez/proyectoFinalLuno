@@ -32,10 +32,10 @@ public class PedidoDAOC {
 
 		//mapeo relacional objeto
 		List<Pedido> listPed = new ArrayList<Pedido>();
-		LocalidadDAOC localidadDAOC = new LocalidadDAOC();
+		LocalidadDAO2 localidadDAO2 = new LocalidadDAO2();
 		while (rs.next()) {
 			//TODO: mapear ORM con hibernate
-			Localidad localidad = localidadDAOC.getLocalidadXID(rs.getInt("localidad"));
+			Localidad localidad = localidadDAO2.getLocalidadXID(rs.getInt("localidad"));
 			
 			Pedido pedido = new Pedido(rs.getInt("idpedido"), rs.getString("nombre"), rs.getString("apellido"), rs.getString("usuario"), rs.getString("mail"), rs.getString("lugarentrega"), localidad, rs.getString("codpostal"), rs.getString("formadepago"), rs.getString("tarjtitular"), rs.getInt("tarjnumero"), rs.getString("tarjvto"), rs.getInt("tarjclave"));
 			
@@ -104,9 +104,9 @@ public class PedidoDAOC {
 		String sql = new String("SELECT * FROM pedidos WHERE idpedido= " + id);
 		ResultSet rs = st.executeQuery(sql);
 
-		LocalidadDAOC localidadDAOC = new LocalidadDAOC();
+		LocalidadDAO2 localidadDAO2 = new LocalidadDAO2();
 		while (rs.next()) {
-			Localidad localidad = localidadDAOC.getLocalidadXID(rs.getInt("localidad"));
+			Localidad localidad = localidadDAO2.getLocalidadXID(rs.getInt("localidad"));
 			
 			Pedido pedido = new Pedido(rs.getInt("idpedido"), rs.getString("nombre"), rs.getString("apellido"), rs.getString("usuario"), rs.getString("mail"), rs.getString("lugarentrega"), localidad, rs.getString("codpostal"), rs.getString("formadepago"), rs.getString("tarjtitular"), rs.getInt("tarjnumero"), rs.getString("tarjvto"), rs.getInt("tarjclave"));
 			

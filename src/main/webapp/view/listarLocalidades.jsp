@@ -7,7 +7,7 @@
 <html lang="en">
 
 <head>
-<title>Listar Localidadesssssssssssss</title>
+<title>Listar Localidades</title>
 <!-- Required meta tags -->
 <link rel="shortcut icon" href="images/loguito.png" />
 <meta charset="ISO-8859-1">

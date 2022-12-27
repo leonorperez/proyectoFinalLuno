@@ -55,7 +55,7 @@ public class LocalidadDAO2 {
 		return listLocal;
 	}
 	public Localidad getLocalidadXID(Integer id) throws SQLException {
-		//conn a db
+
 		ConexionDB conex = new ConexionDB();
 		Connection conn= conex.establecerConexion();
 		Statement st = conn.createStatement();
@@ -92,4 +92,18 @@ public class LocalidadDAO2 {
 		return cantUpd == 1;
 	}
 
+	/**
+	 * 
+	 * @param idLoc
+	 * @return  true si la borró o false sino.
+	 * @throws SQLException
+	 */
+	public Boolean deleteLocalidad(Integer idLoc) throws SQLException {
+		ConexionDB con = new ConexionDB();
+		Statement st= con.crearStatement();
+		
+		Integer cantDel = st.executeUpdate("DELETE FROM localidades WHERE idlocalidad='"+idLoc+"'");
+		
+		return cantDel == 1;
+	}
 }
